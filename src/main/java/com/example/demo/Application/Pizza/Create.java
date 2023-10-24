@@ -19,8 +19,9 @@ public class Create {
 
     }
     public record ResponsePizza(){}
+    
     @RestController
-    @RequestMapping("api/foo")
+    @RequestMapping("api/pizza")
     public class Controller{
 
         private final Pipeline pipeline;
@@ -43,7 +44,8 @@ public class Create {
             this.repository = repository;
         }
         @Override
-        public ResponsePizza handle(RequestPizza arg0) {
+        public ResponsePizza handle(RequestPizza request) {
+
            this.repository.add(null);
            return new ResponsePizza();
         }
