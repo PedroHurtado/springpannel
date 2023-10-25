@@ -21,7 +21,7 @@ public class Create {
     public record ResponsePizza(){}
     
     @RestController
-    @RequestMapping("api/pizza")
+    @RequestMapping("/api/pizzas")
     public class Controller{
 
         private final Pipeline pipeline;
